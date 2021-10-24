@@ -2,7 +2,7 @@
 // 你可以在此编辑器中写入代码
 if (place_meeting(x, y, Character1) and Character1.y_vel >0){
 	not_hit = false
-	audio_play_sound(Cloud, 10, false);
+	audio_play_sound(Cloud_hit, 10, false);
 	Character1.y_vel = -20;
 	//show_debug_message(sprite_index)
 	
@@ -50,7 +50,7 @@ if ((sprite_index == Cloud1_miss or sprite_index ==Cloud2_miss or sprite_index =
 if (place_meeting(x, y, Character2) and Character2.y_vel >0){
 	not_hit = false
 	Character2.y_vel = -20;
-	audio_play_sound(Cloud, 10, false);
+	audio_play_sound(Cloud_hit, 10, false);
 	//show_debug_message(sprite_index)
 	
 		if sprite_index ==  Cloud1{

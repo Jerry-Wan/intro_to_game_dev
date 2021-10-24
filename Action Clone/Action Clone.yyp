@@ -11,7 +11,7 @@
     {"id":{"name":"Cloud4","path":"sprites/Cloud4/Cloud4.yy",},"order":7,},
     {"id":{"name":"Sprite11","path":"sprites/Sprite11/Sprite11.yy",},"order":10,},
     {"id":{"name":"Hit","path":"sounds/Hit/Hit.yy",},"order":2,},
-    {"id":{"name":"Cloud","path":"sounds/Cloud/Cloud.yy",},"order":0,},
+    {"id":{"name":"Cloud_hit","path":"sounds/Cloud_hit/Cloud_hit.yy",},"order":0,},
     {"id":{"name":"Cloud3","path":"sprites/Cloud3/Cloud3.yy",},"order":14,},
     {"id":{"name":"Star_effect","path":"objects/Star_effect/Star_effect.yy",},"order":7,},
     {"id":{"name":"Cloud1_miss","path":"sprites/Cloud1_miss/Cloud1_miss.yy",},"order":12,},
@@ -74,7 +74,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.4.577",
+    "IDEVersion": "2.3.5.589",
   },
   "resourceVersion": "1.4",
   "name": "Action Clone",

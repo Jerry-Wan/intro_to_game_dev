@@ -9,5 +9,5 @@ instance_create_layer(
 	y,
 	"Instances",
 	Character2);
-
+reboot2 = true
 audio_play_sound(respawn, 10, false);

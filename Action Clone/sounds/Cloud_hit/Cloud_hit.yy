@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "Cloud.mp3",
+  "soundFile": "Cloud_hit.mp3",
   "duration": 0.696,
   "parent": {
     "name": "声音",
     "path": "folders/声音.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Cloud",
+  "name": "Cloud_hit",
   "tags": [],
   "resourceType": "GMSound",
 }
