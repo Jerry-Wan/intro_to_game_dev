@@ -18,14 +18,14 @@ if (place_meeting(x, y, Character1) and Character1.y_vel >0){
 			image_speed = 1
 		}
 		
-		if sprite_index ==  Cloud3{
+		if sprite_index ==  Player1_Cloud3{
 			sprite_index = Cloud3_miss
 			image_index = 0
 			image_speed = 1
 		
 		}
 		
-		if sprite_index ==  Cloud4{
+		if sprite_index ==  Player1_Cloud4{
 			sprite_index = Cloud4_miss
 			image_index = 0
 			image_speed = 1
