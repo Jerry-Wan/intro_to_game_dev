@@ -9,3 +9,14 @@ reboot2 = false
 alarm[0] = 60
 alarm[1] = 60
 alarm[2] = 20
+
+if room == score_game_room{
+	show_debug_message("score")
+	mode = 1
+}
+if room == time_game_room{
+	show_debug_message("time")
+	mode = 2
+	time = 90
+	alarm[3] = 60
+}

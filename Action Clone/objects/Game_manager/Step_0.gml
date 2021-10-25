@@ -29,7 +29,7 @@ if (instance_exists(Character2) and instance_exists(Character1) = false){
 	camera_set_view_pos(view_camera[0],0,min(Character2.y-40,0))
 }
 
-show_debug_message(alarm[0])
+//show_debug_message(alarm[0])
 if ((instance_exists(Character1) == false) and (reboot1 == true)){
 	alarm[0] = 180
 	reboot1 = false
