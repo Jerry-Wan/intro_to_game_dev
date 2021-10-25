@@ -9,6 +9,8 @@ reboot2 = false
 alarm[0] = 60
 alarm[1] = 60
 alarm[2] = 20
+red_cloud = 0
+green_cloud = 0
 
 if room == score_game_room{
 	show_debug_message("score")

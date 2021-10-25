@@ -43,7 +43,11 @@ if ((sprite_index == Cloud1_miss or sprite_index ==Cloud2_miss or sprite_index =
 	if (image_index == 3){
 		//show_debug_message("miss1")
 		Game_manager.exist_cloud -=1
+		Game_manager.red_cloud-=1
 		instance_destroy();
 	}
 }
 
+if room != score_game_room and room != time_game_room{
+	instance_destroy();
+}

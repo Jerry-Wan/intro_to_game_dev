@@ -13,7 +13,7 @@ else{
 }
 if y>768{
 	instance_create_layer(x,y,"Instances",Star_effect);
-	Game_manager.score2 -=1
+	//Game_manager.score2 -=1
 	audio_play_sound(Dead, 10, false);
 	instance_destroy ()
 	

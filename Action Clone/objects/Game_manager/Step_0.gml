@@ -47,3 +47,31 @@ if exist_cloud <20 and alarm_activated = false{
 	alarm[2] = 180;
 	alarm_activated = true
 }
+
+if mode == 2{
+	if time == 0{
+		if score1 > score2{
+			room_goto(Player1_win_room)
+			instance_destroy();
+		}
+		else if score2 > score1 {
+			room_goto(Player2_win_room5)
+			instance_destroy();
+		}
+		else{
+			room_goto(Draw_room)
+			instance_destroy();
+		}
+	}
+}
+else{
+	if score1 == 10 {
+		room_goto(Player1_win_room)
+		instance_destroy();
+	}
+	else if score2 == 10{
+		room_goto(Player2_win_room5)
+		instance_destroy();
+	}
+}
+			

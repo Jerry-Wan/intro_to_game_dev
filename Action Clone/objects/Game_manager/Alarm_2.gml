@@ -15,7 +15,7 @@ while place_meeting(create_x , create_y, Cloud){
 	create_x = random(wide)+cam_x
 }
 
-if Game_manager.score2 -  Game_manager.score1 >=5{
+if Game_manager.score2 -  Game_manager.score1 >=3 and red_cloud <=5{
 	if generate_index > 65{
 		instance_create_layer(
 		create_x,
@@ -23,6 +23,26 @@ if Game_manager.score2 -  Game_manager.score1 >=5{
 		"Instances",
 		Player1_Cloud);
 		exist_cloud += 1
+		red_cloud += 1
+	}
+	else{
+		instance_create_layer(
+		create_x,
+		create_y,
+		"Instances",
+		Cloud);
+		exist_cloud += 1
+	}
+}
+else if Game_manager.score1 -  Game_manager.score2 >=3 and green_cloud <=5{
+	if generate_index > 65{
+		instance_create_layer(
+		create_x,
+		create_y,
+		"Instances",
+		Player2_Cloud);
+		exist_cloud += 1
+		green_cloud += 1
 	}
 	else{
 		instance_create_layer(

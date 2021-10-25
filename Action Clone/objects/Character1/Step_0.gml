@@ -14,7 +14,7 @@ else{
 
 if y>768{
 	instance_create_layer(x,y,"Instances",Star_effect);
-	Game_manager.score1 -=1
+	//Game_manager.score1 -=1
 	//Game_manager.alarm[0]=180
 	audio_play_sound(Dead, 10, false);
 	instance_destroy ()
@@ -26,7 +26,7 @@ if place_meeting(x, y, Character2){
 		y_vel = -30
 		Character2.y_vel = 30
 		Game_manager.score1 += 1
-		Game_manager.score2 -= 1
+		//Game_manager.score2 -= 1
 		audio_play_sound(Hit, 10, false);
 		instance_create_layer(x,y,"Instances",Star_effect);
 		able_to_hit = false
@@ -36,7 +36,7 @@ if place_meeting(x, y, Character2){
 		y_vel = 30
 		Character2.y_vel = -30;
 		Game_manager.score2 += 1;
-		Game_manager.score1 -= 1;
+		// Game_manager.score1 -= 1;
 		audio_play_sound(Hit, 10, false);
 		instance_create_layer(x,y,"Instances",Star_effect);
 		able_to_hit = false
