@@ -7,16 +7,17 @@ var high = camera_get_view_height(view_camera[0]); // gets cam height
 
 
 if(instance_exists(Character1) and instance_exists(Character2)) {
-	if Character1.y-lerp(Character1.y,Character2.y,0.5) > high/2-20{
+	difference = lerp(Character1.y,Character2.y,0.5)
+	if Character1.y- difference> high/2-20{
 		//show_debug_message(1)
 		camera_set_view_pos(view_camera[0],0,min(Character1.y-40,0))
 	}
-	else if Character2.y-lerp(Character2.y,Character1.y,0.5) > high/2-20{
+	else if Character2.y+difference > high/2-20{
 		//show_debug_message(2)
 		camera_set_view_pos(view_camera[0],0,min(Character2.y-40,0))
 	}
 	else{
-		camera_set_view_pos(view_camera[0],0,min(lerp(Character1.y,Character2.y,0.5)-high/2,0,384));
+		camera_set_view_pos(view_camera[0],0,min(difference-high/2,0,384));
 		//show_debug_message(3)
 	}
 }
