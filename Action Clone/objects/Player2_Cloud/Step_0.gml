@@ -49,6 +49,11 @@ if (place_meeting(x, y, Character2) and Character2.y_vel >0){
 			
 		}
 }
+
+if (place_meeting(x, y, Character1) and Character1.y_vel >0){
+	audio_play_sound(Error_cloud, 10, false);
+}
+
 if room != score_game_room and room != time_game_room{
 	instance_destroy();
 }

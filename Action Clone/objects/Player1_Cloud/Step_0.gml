@@ -32,6 +32,9 @@ if (place_meeting(x, y, Character1) and Character1.y_vel >0){
 			
 		}
 }
+if (place_meeting(x, y, Character2) and Character2.y_vel >0){
+	audio_play_sound(Error_cloud, 10, false);
+}
 
 if image_index == 3 and not_hit == true {
 	image_speed = 0
