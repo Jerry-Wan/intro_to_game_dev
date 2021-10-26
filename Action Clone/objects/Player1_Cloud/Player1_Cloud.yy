@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "Player1_Cloud1",
+    "path": "sprites/Player1_Cloud1/Player1_Cloud1.yy",
+  },
   "solid": true,
   "visible": true,
   "spriteMaskId": null,
