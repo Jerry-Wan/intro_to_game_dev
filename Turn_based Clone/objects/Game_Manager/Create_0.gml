@@ -8,7 +8,7 @@ global.deck = ds_list_create();
 
 
 
-for(i = 0; i<24; i++){
+for(i = 0; i<global.numcards; i++){
 	var newcard  = instance_create_layer(10,280+2*i,"Instances",Cards);
 	newcard.card_type = choose(face_index.rock, face_index.paper, face_index.Scissors)
 	//newcard.face_up = true;
