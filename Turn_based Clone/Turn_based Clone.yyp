@@ -4,6 +4,7 @@
     {"id":{"name":"paper","path":"sprites/paper/paper.yy",},"order":3,},
     {"id":{"name":"Cards","path":"objects/Cards/Cards.yy",},"order":1,},
     {"id":{"name":"Game_Manager","path":"objects/Game_Manager/Game_Manager.yy",},"order":0,},
+    {"id":{"name":"Sprite5","path":"sprites/Sprite5/Sprite5.yy",},"order":15,},
     {"id":{"name":"card_back","path":"sprites/card_back/card_back.yy",},"order":0,},
     {"id":{"name":"rock","path":"sprites/rock/rock.yy",},"order":1,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},

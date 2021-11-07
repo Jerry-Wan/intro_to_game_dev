@@ -5,15 +5,16 @@ cpu_score = 0
 distribute_card = true
 global.numcards = 24;
 global.deck = ds_list_create();
+global.cpu = ds_list_create();
 
-
+seq_num = 0
 
 for(i = 0; i<global.numcards; i++){
 	var newcard  = instance_create_layer(10,280+2*i,"Instances",Cards);
 	newcard.card_type = choose(face_index.rock, face_index.paper, face_index.Scissors)
 	//newcard.face_up = true;
-	newcard.target_x = x;
-	newcard.target_y = y - 2 * i;
+	newcard.target_x = 10;
+	newcard.target_y = 280+2*i
 	ds_list_add(global.deck, newcard);
 	
 }
