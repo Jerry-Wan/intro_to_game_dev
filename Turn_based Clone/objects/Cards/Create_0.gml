@@ -13,4 +13,4 @@ enum face_index
 }
 
 card_type = face_index.rock
-show_debug_message(id)
+//show_debug_message(id)

@@ -12,14 +12,17 @@ function sleep(millis){
 your_score =0
 cpu_score = 0
 distribute_card = true
+
 global.numcards = 24;
 global.deck = ds_list_create();
 global.cpu = ds_list_create();
 global.handCard = noone;
+randomise();
 
 seq_num = 0
 select_num  = -1
 card_selected = false
+clicked = false
 
 for(i = 0; i<global.numcards; i++){
 	var newcard  = instance_create_layer(10,280+2*i,"Instances",Cards);
