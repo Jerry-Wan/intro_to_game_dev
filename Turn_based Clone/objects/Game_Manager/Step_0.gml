@@ -54,7 +54,7 @@ switch(global.state)
 		global.handCard.target_y = 420
 		cpuSelectedCard.status_code += 2
 		sleep(250)
-		break
+		//global.state = state.resolve
 	}
 	// you will fill this in later
 
@@ -63,11 +63,20 @@ switch(global.state)
 	case state.resolve:
 	  //return all cards in 'hand' to deck
 	  var cards_in_hand = ds_list_size(global.hand)
+	  var cards_in_cpu = ds_list_size(global.cpu)
 	  select_num = -1
 	  card_selected = false
 	  if (cards_in_hand > 0)
 		{
 	    var card = global.hand[| cards_in_hand - 1]
+	    //put on bottom
+	    ds_list_insert(global.deck, 0, card)
+	    card.target_x = x
+	    card.target_y = y
+	  } 
+	  else if (cards_in_cpu > 0)
+		{
+	    var card = global.cpu[| cards_in_hand - 1]
 	    //put on bottom
 	    ds_list_insert(global.deck, 0, card)
 	    card.target_x = x
