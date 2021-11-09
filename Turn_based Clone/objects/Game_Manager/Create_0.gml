@@ -9,6 +9,7 @@ function sleep(millis){
 	}
 }
 
+wait_next = false
 your_score =0
 cpu_score = 0
 distribute_card = true

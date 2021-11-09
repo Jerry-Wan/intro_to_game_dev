@@ -43,7 +43,10 @@ switch(global.state)
 	}
 	//show_debug_message(select_num)
 	global.cpuSelectedCard = global.cpu[| select_num]
-	
+	if global.cpuSelectedCard!= noone and wait_next == false{
+		wait_next = true
+		alarm[3] = 50
+	}
 	
 	
 	
@@ -53,8 +56,6 @@ switch(global.state)
 		clicked = true
 		global.handCard.target_x = 500
 		global.handCard.target_y = 420
-		global.cpuSelectedCard.target_x = 500
-		global.cpuSelectedCard.target_y = 250
 		global.cpuSelectedCard.status_code += 2
 		//show_debug_message(global.cpuSelectedCard.sprite_index)
 		//show_debug_message(global.handCard.sprite_index)
@@ -75,6 +76,7 @@ switch(global.state)
 	  clicked = false
 	  global.cpuSelectedCard = noone
 	  global.handCard = noone
+	  wait_next = false
 	  
 	  
 	  if (cards_in_hand > 0)
