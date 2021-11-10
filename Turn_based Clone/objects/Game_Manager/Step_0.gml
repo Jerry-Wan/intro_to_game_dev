@@ -20,6 +20,7 @@ switch(global.state)
 
       card.target_x = 300 + cards_in_hand * 200
       card.target_y = room_height*2 / 3 + 50
+	  audio_play_sound(Shuffle_Sound, 10, false);
 	  card.status_code +=1
     } 
 	else if(cards_in_cpu < 3)
@@ -29,6 +30,7 @@ switch(global.state)
       ds_list_add(global.cpu, card)
       card.target_x = 300 + cards_in_cpu * 200
       card.target_y = 50
+	  audio_play_sound(Shuffle_Sound, 10, false);
 	}
 	else 
 	{
@@ -56,6 +58,7 @@ switch(global.state)
 		clicked = true
 		global.handCard.target_x = 500
 		global.handCard.target_y = 420
+		audio_play_sound(Shuffle_Sound, 10, false);
 		global.cpuSelectedCard.status_code += 2
 		//show_debug_message(global.cpuSelectedCard.sprite_index)
 		//show_debug_message(global.handCard.sprite_index)
@@ -87,6 +90,7 @@ switch(global.state)
 	    //ds_list_insert(global.deck, 0, card)
 	    card.target_x = 1000
 	    card.target_y = 280
+		audio_play_sound(Shuffle_Sound, 10, false);
 		ds_list_delete(global.hand, cards_in_hand - 1);
 	  } 
 	  else if (cards_in_cpu > 0)
@@ -96,6 +100,7 @@ switch(global.state)
 	    //ds_list_insert(global.deck, 0, cpucard)
 	    cpucard.target_x = 1000
 	    cpucard.target_y = 280
+		audio_play_sound(Shuffle_Sound, 10, false);
 		ds_list_delete(global.cpu, cards_in_cpu - 1);
 	  } 
 	else
@@ -106,6 +111,7 @@ switch(global.state)
 				var card = global.deck[| i]
 				card.target_x = card.init_x
 				card.target_y = card.init_y
+				audio_play_sound(Shuffle_Sound, 10, false);
 				card.status_code = 0
 				card.card_type = choose(face_index.rock, face_index.paper, face_index.Scissors)
 				card.face_up = false
