@@ -8,12 +8,10 @@ show_debug_message(global.handCard.card_type)
 			if global.handCard.card_type =  face_index.Scissors{
 					show_debug_message("here paper vs Scissors")
 					your_score += 1
-					alarm[4] = 40
 			}
 			else if global.handCard.card_type =  face_index.rock{
 					show_debug_message("here paper vs rock")
 					cpu_score +=1
-					alarm[5] = 40
 			}
 		}
 			
@@ -22,12 +20,10 @@ show_debug_message(global.handCard.card_type)
 			if global.handCard.card_type =  face_index.paper{
 					show_debug_message("here Scissors vs paper")
 					cpu_score += 1
-					alarm[5] = 40
 			}
 			else if global.handCard.card_type =  face_index.rock{
 					show_debug_message("here Scissors vs rock")
 					your_score +=1
-					alarm[4] = 40
 			}
 		}
 		
@@ -36,12 +32,10 @@ show_debug_message(global.handCard.card_type)
 			if global.handCard.card_type =  face_index.paper{
 					show_debug_message("here rock vs paper")
 					your_score += 1
-					alarm[4] = 40
 			}
 			else if global.handCard.card_type =  face_index.Scissors{
 					show_debug_message("here paper vs Scissors")
 					cpu_score +=1
-					alarm[5] = 40
 			}
 			
 	}
