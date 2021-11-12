@@ -1,12 +1,21 @@
 {
   "resources": [
+    {"id":{"name":"small_button","path":"objects/small_button/small_button.yy",},"order":5,},
+    {"id":{"name":"equal","path":"sprites/equal/equal.yy",},"order":7,},
+    {"id":{"name":"equal_button","path":"objects/equal_button/equal_button.yy",},"order":6,},
+    {"id":{"name":"larger","path":"sprites/larger/larger.yy",},"order":5,},
     {"id":{"name":"Scissors","path":"sprites/Scissors/Scissors.yy",},"order":2,},
+    {"id":{"name":"large_button","path":"objects/large_button/large_button.yy",},"order":4,},
     {"id":{"name":"paper","path":"sprites/paper/paper.yy",},"order":3,},
+    {"id":{"name":"Guess_card","path":"sprites/Guess_card/Guess_card.yy",},"order":4,},
     {"id":{"name":"Cards","path":"objects/Cards/Cards.yy",},"order":1,},
     {"id":{"name":"Game_Manager","path":"objects/Game_Manager/Game_Manager.yy",},"order":0,},
-    {"id":{"name":"Sprite5","path":"sprites/Sprite5/Sprite5.yy",},"order":15,},
     {"id":{"name":"card_back","path":"sprites/card_back/card_back.yy",},"order":0,},
+    {"id":{"name":"Guess_Cards","path":"objects/Guess_Cards/Guess_Cards.yy",},"order":3,},
+    {"id":{"name":"Guess_Room","path":"rooms/Guess_Room/Guess_Room.yy",},"order":1,},
     {"id":{"name":"rock","path":"sprites/rock/rock.yy",},"order":1,},
+    {"id":{"name":"Guess_Manager","path":"objects/Guess_Manager/Guess_Manager.yy",},"order":2,},
+    {"id":{"name":"smaller","path":"sprites/smaller/smaller.yy",},"order":6,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
@@ -29,6 +38,7 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"Guess_Room","path":"rooms/Guess_Room/Guess_Room.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "Folders": [
