@@ -27,7 +27,13 @@ clicked = false
 
 for(i = 0; i<global.numcards; i++){
 	var newcard  = instance_create_layer(10,280+2*i,"Instances",Guess_Cards);
-	newcard.card_image = random(9)
+	randNum = random(9)
+	for(a = 0; a<i; a++){
+		if randNum = global.deck[|a].card_image{
+			randNum = random(9)
+		}
+	}
+	newcard.card_image = randNum
 	//newcard.face_up = true;
 	newcard.init_x = 10;
 	newcard.init_y = 280+2*i
