@@ -27,17 +27,40 @@ switch(global.state)
 
   case state.play:
 	select_num = 0
-	//show_debug_message(select_num)
-	global.cpuSelectedCard = global.cpu[| select_num]
-	if global.cpuSelectedCard!= noone and wait_next == false{
-		wait_next = true
-		global.cpuSelectedCard.face_up= true
+	if select_num < 4{
+		//show_debug_message(select_num)
+		global.cpuSelectedCard = global.cpu[| select_num]
+		global.cpuComparedCard = global.cpu[| select_num+1]
+		if global.cpuSelectedCard!= noone and wait_next == false{
+			wait_next = true
+			global.cpuSelectedCard.face_up= true
+			show_debug_message(operation)
+				if operation ==1 {
+					if global.cpuComparedCard.card_image > global.cpuSelectedCard.card_image{
+						select_num += 1
+						operation = noone
+					}
+					else{
+						alarm[1] = 250
+					}
+				}
+				else if operation == 0{
+					if global.cpuComparedCard.card_image < global.cpuSelectedCard.card_image{
+						select_num += 1
+						operation = noone
+					}
+					else{
+						alarm[1] = 250
+					}
+				}
+			}
+			
+
 	}
-	
-	
-	
-	
-	
+	else{
+		alarm[1] = 250
+	}
+
 
    break
 	
