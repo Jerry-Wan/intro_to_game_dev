@@ -13,6 +13,7 @@ wait_next = false
 your_score =0
 cpu_score = 0
 distribute_card = true
+clicked = 0
 
 global.numcards = 10;
 global.deck = ds_list_create();
@@ -29,7 +30,7 @@ clicked = false
 for(i = 0; i<global.numcards; i++){
 	var newcard  = instance_create_layer(10,280+2*i,"Instances",Guess_Cards);
 	randNum = irandom(9)
-	while ds_list_find_index(usedNum, randNum){
+	if ds_list_find_index(usedNum, randNum){
 		randNum = irandom(9)
 	}
 	ds_list_add(usedNum,randNum)
@@ -44,7 +45,7 @@ for(i = 0; i<global.numcards; i++){
 	
 }
 
-
+ds_list_clear(usedNum)
 // in Create
 operation =noone
 global.state = state.setup
