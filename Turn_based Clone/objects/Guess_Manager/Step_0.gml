@@ -28,7 +28,6 @@ switch(global.state)
 
   case state.play:
 	//show_debug_message(operation)
-	
 	if select_num < 4{
 		if global.cpu[| select_num]!= noone and wait_next == false{
 			wait_next = true
@@ -40,10 +39,12 @@ switch(global.state)
 				show_debug_message("op = 1")
 				clicked = true
 				alarm[2] = 1
+				break
 		}
 		else if operation == 0 and clicked = false{
 			clicked = true
 			alarm[3] = 1
+			break
 		}
 	}	
 
@@ -64,6 +65,8 @@ switch(global.state)
 	  global.cpuSelectedCard = noone
 	  global.handCard = noone
 	  wait_next = false
+	  select_num = 0
+	  operation = noone
 	  
 	  
 	 if (cards_in_cpu > 0)
