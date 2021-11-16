@@ -1,7 +1,6 @@
 {
   "resources": [
     {"id":{"name":"small_button","path":"objects/small_button/small_button.yy",},"order":5,},
-    {"id":{"name":"equal","path":"sprites/equal/equal.yy",},"order":7,},
     {"id":{"name":"larger","path":"sprites/larger/larger.yy",},"order":5,},
     {"id":{"name":"Scissors","path":"sprites/Scissors/Scissors.yy",},"order":2,},
     {"id":{"name":"large_button","path":"objects/large_button/large_button.yy",},"order":4,},

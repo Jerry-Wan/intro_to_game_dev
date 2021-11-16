@@ -29,31 +29,32 @@ switch(global.state)
   case state.play:
 	//show_debug_message(operation)
 	if select_num < 4{
-		if global.cpu[| select_num]!= noone and wait_next == false{
-			wait_next = true
+		if global.cpu[| select_num]!= noone {
 			global.cpu[| select_num].face_up= true
-			show_debug_message("work")
+			//show_debug_message("work")
 			
 		}
 		if operation ==1   and clicked = false{
 				show_debug_message("op = 1")
 				clicked = true
 				alarm[2] = 1
-				break
 		}
 		else if operation == 0 and clicked = false{
 			clicked = true
 			alarm[3] = 1
-			break
 		}
+		clicked = false
 	}	
+	
 
-	else{
+	if select_num == 4 and round_finish == false{
+		round_finish = true
+		global.cpu[| select_num].face_up= true
 		alarm[1] = 250
 	}
 
 
-   break
+	break
 	
 	case state.resolve:
 	  //return all cards in 'hand' to deck
@@ -67,6 +68,9 @@ switch(global.state)
 	  wait_next = false
 	  select_num = 0
 	  operation = noone
+	  round_finish = false
+	  
+	  //show_debug_message(usedNum)
 	  
 	  
 	 if (cards_in_cpu > 0)
@@ -81,18 +85,14 @@ switch(global.state)
 	else
 		{
 		if seq_num == 10{
+			ds_list_shuffle(usedNum)
 			show_debug_message("done")
 			for(i = 0; i<global.numcards; i++){
 				var card = global.deck[| i]
 				card.target_x = card.init_x
 				card.target_y = card.init_y
 				card.status_code = 0
-				randNum = irandom(9)
-				if ds_list_find_index(usedNum, randNum){
-					randNum = irandom(9)
-				}
-				ds_list_add(usedNum,randNum)
-				show_debug_message(randNum)
+				card.card_image = usedNum[|i]
 				card.face_up = false
 				
 			}

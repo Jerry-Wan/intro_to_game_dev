@@ -8,19 +8,24 @@ function sleep(millis){
 		// Just keep looping
 	}
 }
+randomise();
 
 wait_next = false
 your_score =0
 cpu_score = 0
 distribute_card = true
 clicked = 0
+usedNum = ds_list_create();
+for (i = 0;i <10 ; i++){
+	ds_list_add(usedNum,i)
+}
 
+ds_list_shuffle(usedNum)
 global.numcards = 10;
 global.deck = ds_list_create();
 global.cpu = ds_list_create();
 global.handCard = noone;
-usedNum = ds_list_create();
-randomise();
+round_finish = false
 
 seq_num = 0
 select_num  = -1
@@ -29,13 +34,8 @@ clicked = false
 
 for(i = 0; i<global.numcards; i++){
 	var newcard  = instance_create_layer(10,280+2*i,"Instances",Guess_Cards);
-	randNum = irandom(9)
-	if ds_list_find_index(usedNum, randNum){
-		randNum = irandom(9)
-	}
-	ds_list_add(usedNum,randNum)
-	show_debug_message(randNum)
-	newcard.card_image = randNum
+	newcard.card_image = usedNum[|i]
+	show_debug_message(usedNum[|i])
 	//newcard.face_up = true;
 	newcard.init_x = 10;
 	newcard.init_y = 280+2*i
@@ -45,7 +45,7 @@ for(i = 0; i<global.numcards; i++){
 	
 }
 
-ds_list_clear(usedNum)
+//ds_list_clear(usedNum)
 // in Create
 operation =noone
 global.state = state.setup
